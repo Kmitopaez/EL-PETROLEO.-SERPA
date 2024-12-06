@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería de Petróleo y Gas</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1E1E1E;
+            color: #F4F4F4;
+        }
+        header {
+            background-color: #FF8C00;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background-color: #333333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        .content {
+            padding: 2em;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .contacto {
+            margin-top: 1em;
+            font-weight: bold;
+        }
+        .comment-section {
+            margin-top: 2em;
+            border-top: 1px solid #F4F4F4;
+            padding-top: 1em;
+        }
+        .comment-section h3 {
+            margin-bottom: 0.5em;
+        }
+        .comment-section form, .questionnaire-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .comment-section input, .comment-section textarea, .questionnaire-form input, .questionnaire-form textarea {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: 1px solid #F4F4F4;
+            border-radius: 5px;
+            background-color: #2E2E2E;
+            color: #F4F4F4;
+        }
+        .comment-section button, .questionnaire-form button {
+            padding: 0.5em;
+            border: none;
+            border-radius: 5px;
+            background-color: #FF8C00;
+            color: white;
+            cursor: pointer;
+        }
+        .comment-section button:hover, .questionnaire-form button:hover {
+            background-color: #FFA726;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .image-container img {
+            width: 50%;
+            margin: 0.5em 0;
+        }
+        .button-container {
+            text-align: center;
+            margin: 2em 0;
+        }
+        .button-container button {
+            padding: 1em;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            margin: 0.5em;
+            cursor: pointer;
+        }
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+        #info-colombia, #info-universidades {
+            display: none;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .video-container video {
+            width: 50%;
+        }
+    </style>
+    <script>
+        function toggleQuestionnaire() {
+            var x = document.getElementById("questionnaire-form");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        
+        function toggleInfo(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Ingeniería de Petróleo y Gas</h1>
+    </header>
+    <nav>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#importancia">Importancia</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="content">
+        <div class="image-container">
+            <img src="imagenes/p1.png" alt="Extracción de petróleo offshore">
+            <img src="imagenes/p2.jpg" alt="Extracción de petróleo onshore">
+        </div>
+        <section id="beneficios" class="section">
+            <h2>Beneficios de la Carrera</h2>
+            <p>La ingeniería de petróleo y gas es una carrera con numerosos beneficios. Los profesionales en este campo tienen la oportunidad de trabajar en una industria crucial para el desarrollo económico mundial. Además, esta carrera ofrece atractivas oportunidades salariales y la posibilidad de trabajar en diversos entornos, desde oficinas corporativas hasta sitios de perforación remotos.</p>
+            <p>Otros beneficios incluyen:</p>
+            <ul>
+                <li>Alta demanda laboral.</li>
+                <li>Oportunidades de carrera internacional.</li>
+                <li>Desarrollo constante de habilidades técnicas y de gestión.</li>
+                <li>Contribución significativa al abastecimiento energético global.</li>
+            </ul>
+        </section>
+        <section id="importancia" class="section">
+            <h2>Importancia de la Ingeniería de Petróleo y Gas</h2>
+            <p>La ingeniería de petróleo y gas es vital para la economía global. Esta disciplina se encarga de la exploración, extracción y producción de petróleo y gas natural, recursos esenciales para la industria energética. Sin el petróleo y el gas, muchas de las comodidades modernas y avances tecnológicos no serían posibles.</p>
+            <p>La importancia del petróleo se refleja en su uso como fuente de energía primaria para transporte, calefacción, generación de electricidad, y como materia prima para productos químicos, plásticos y otros materiales esenciales. La ingeniería de petróleo y gas asegura el suministro constante de estos recursos, impulsando así el desarrollo económico y la estabilidad energética mundial.</p>
+        </section>
+        <div class="button-container">
+            <button onclick="toggleInfo('info-colombia')">Más sobre el petróleo en Colombia</button>
+            <button onclick="toggleInfo('info-universidades')">Universidades que ofrecen este programa</button>
+        </div>
+        <section id="info-colombia" class="section">
+            <h2>El Petróleo en Colombia</h2>
+            <p>Colombia es un país con importantes reservas de petróleo, principalmente ubicadas en la región de la Cuenca del Llano y en el Lago de Maracaibo. La industria petrolera en Colombia ha sido un pilar importante de su economía, generando ingresos significativos a través de la exportación de crudo. Sin embargo, también enfrenta desafíos relacionados con la sostenibilidad y el impacto ambiental.</p>
+        </section>
+        <section id="info-universidades" class="section">
+            <h2>Universidades en Colombia que Ofrecen Programas de Petróleo</h2>
+            <ul>
+                <li>Universidad Nacional de Colombia</li>
+                <li>Universidad de los Andes</li>
+                <li>Universidad Industrial de Santander</li>
+                <li>Universidad del Magdalena</li>
+            </ul>
+        </section>
+        <div class="video-container">
+            <video controls>
+                <source src="imagenes/v1.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+        <div class="button-container">
+            <button onclick="toggleQuestionnaire()">Abrir Cuestionario</button>
+        </div>
+        <section id="questionnaire-form" class="questionnaire-form" style="display:none;">
+            <h3>Cuestionario</h3>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="estudio">¿Qué te gustaría estudiar?</label>
+                <input type="text" id="estudio" name="estudio">
+                <label for="porque">¿Por qué te gustaría estudiar esto?</label>
+                <textarea id="porque" name="porque" rows="4"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="contacto" class="section contacto">
+            <h2>Contacto</h2>
+            <p>Yilson Cerpa Echeverría</p>
+            <p>Email: serpayilson1206@gmail.com</p>
+        </section>
+        <section class="comment-section">
+            <h3>Comentarios</h3>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Ingeniería de Petróleo y Gas
+    </footer>
+</body>
+</html>
